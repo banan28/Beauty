@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1066560239078",
+    "project_id": "superpharm-8e294",
+    "storage_bucket": "superpharm-8e294.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1066560239078:android:d184d60cf9d2528bf29227",
+        "android_client_info": {
+          "package_name": "com.example.superpharm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1066560239078-qv65q8efr7gr2qd72raq6hvdgrnfnk52.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.superpharm",
+            "certificate_hash": "989e8fe9048c3527c64e926070f2570ea0f980c2"
+          }
+        },
+        {
+          "client_id": "1066560239078-0n0ovvhk5k093adfloceeo6q9eqvkriv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjtTR1LqmMYotVAZ6JmK-vdIZGusa3jvI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1066560239078-0n0ovvhk5k093adfloceeo6q9eqvkriv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
