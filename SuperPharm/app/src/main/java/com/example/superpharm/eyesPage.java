@@ -29,12 +29,12 @@ public class eyesPage extends AppCompatActivity {
         btnBuy = findViewById(R.id.btnBuy);
         products = findViewById(R.id.eyesList);
         eyesList = new ArrayList<Eyes>();
-        Eyes ey = new Eyes("eye","black",10.00, BitmapFactory.decodeResource(getResources(),R.drawable.fr1),12.00);
+        Eyes ey = new Eyes("eye","black",10.00, BitmapFactory.decodeResource(getResources(),R.drawable.e1),12.00,15,"eyes","");
         eyesList.add(ey);
-        Eyes ey1 = new Eyes("eye","black",10.00, BitmapFactory.decodeResource(getResources(),R.drawable.fr2),20.00);
+        Eyes ey1 = new Eyes("eye","black",10.00, BitmapFactory.decodeResource(getResources(),R.drawable.e2),20.00,15,"eyes","");
         eyesList.add(ey1);
-        Eyes ey2 = new Eyes("eye","black",10.00, BitmapFactory.decodeResource(getResources(),R.drawable.fr3),20.00);
-        eyesList.add(ey2);
+        //Eyes ey2 = new Eyes("eye","black",10.00, BitmapFactory.decodeResource(getResources(),R.drawable.fr3),20.00,15,"eyes","");
+        //eyesList.add(ey2);
         final EyesList adapter = new EyesList(eyesPage.this, eyesList);
         products.setAdapter(adapter);
         products.setOnItemClickListener(new AdapterView.OnItemClickListener() {

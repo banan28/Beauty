@@ -9,12 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Payment"></activity>
+        <activity android:name=".Bag"></activity>
+        <activity android:name=".MyCart" />
+        <activity android:name=".Payment" />
         <activity android:name=".ItemActivity" />
         <activity android:name=".facePge" />
         <activity android:name=".lipPage" />
         <activity android:name=".eyesPage" />
-        <activity android:name=".MakeUp" />
         <activity android:name=".MaiScreen" />
         <activity android:name=".SignAct" />
         <activity android:name=".MainActivity">

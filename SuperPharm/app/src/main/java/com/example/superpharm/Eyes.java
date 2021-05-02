@@ -3,12 +3,15 @@ package com.example.superpharm;
 import android.graphics.Bitmap;
 
 public class Eyes extends MainProduct {
-    public Eyes(String type, String color, Double size, Bitmap bt, Double price) {
+    public Eyes(String type, String color, Double size, Bitmap bt, Double price, int qt, String t, String nn) {
         this.type = type;
         this.color = color;
         this.size = size;
         this.bt = bt;
         this.price = price;
+        this.quantity = qt;
+        this.tType = t;
+        this.nameOf = nn;
     }
 
     public Double getSize() {

@@ -4,11 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MakeUp">
+    tools:context=".Bag">
 
     <ListView
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        tools:layout_editor_absoluteX="1dp"
+        android:layout_width="412dp"
+        android:layout_height="393dp"
+        tools:layout_editor_absoluteX="-2dp"
         tools:layout_editor_absoluteY="1dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="462dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

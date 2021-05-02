@@ -25,12 +25,12 @@ public class facePge extends AppCompatActivity {
         setContentView(R.layout.activity_lip_page);
         products = findViewById(R.id.lipList);
         faceList = new ArrayList<Face>();
-        Face fc = new Face("waterproof","red", 10.00, BitmapFactory.decodeResource(getResources(),R.drawable.fd1),15);
+        Face fc = new Face("waterproof","red", 10.00, BitmapFactory.decodeResource(getResources(),R.drawable.fc),15,15,"face","");
         faceList.add(fc);
-        Face fc1 = new Face("waterproof","red", 10.00, BitmapFactory.decodeResource(getResources(),R.drawable.fd2),15);
-        faceList.add(fc1);
-        Face fc2 = new Face("waterproof","red", 10.00, BitmapFactory.decodeResource(getResources(),R.drawable.fd3),15);
-        faceList.add(fc2);
+        //Face fc1 = new Face("waterproof","red", 10.00, BitmapFactory.decodeResource(getResources(),R.drawable.fd2),15,15,"face","");
+        //faceList.add(fc1);
+        //Face fc2 = new Face("waterproof","red", 10.00, BitmapFactory.decodeResource(getResources(),R.drawable.fd3),15,15,"face","");
+        //faceList.add(fc2);
         FaceList adapter = new FaceList(facePge.this,faceList);
         products.setAdapter(adapter);
         products.setOnItemClickListener(new AdapterView.OnItemClickListener() {

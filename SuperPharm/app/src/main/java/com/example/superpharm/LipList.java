@@ -24,9 +24,11 @@ public class LipList extends ArrayAdapter<Lip> {
         ImageView img = listviewItem.findViewById(R.id.imageView);
         TextView txtType = listviewItem.findViewById(R.id.txPrice);
         TextView txtPrice = listviewItem.findViewById(R.id.txType);
+        TextView quant = listviewItem.findViewById(R.id.txQuant);
         Lip lp = eyesList.get(position);
         txtPrice.setText(lp.getType());
         txtType.setText(lp.getType());
+      //  quant.setText(lp.quantity);
         img.setImageBitmap(lp.getBt());
         return listviewItem;
     }

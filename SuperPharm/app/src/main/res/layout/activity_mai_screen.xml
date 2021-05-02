@@ -4,41 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#EC8B8B"
     tools:context=".MaiScreen">
 
     <Button
         android:id="@+id/btnFace"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Face products"
-        android:textSize="18sp"
+        android:layout_width="189dp"
+        android:layout_height="114dp"
+        android:backgroundTint="#C56363"
+        android:text="Face "
+        android:textSize="21sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.266" />
+        app:layout_constraintVertical_bias="0.252" />
 
     <Button
         android:id="@+id/btnLip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Lip products"
-        android:textSize="18sp"
+        android:layout_width="183dp"
+        android:layout_height="111dp"
+        android:backgroundTint="#95C32D"
+        android:text="Lip "
+        android:textSize="21sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.452" />
+        app:layout_constraintVertical_bias="0.485" />
 
     <Button
         android:id="@+id/btnEyes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Eyes products"
-        android:textSize="18sp"
+        android:layout_width="187dp"
+        android:layout_height="119dp"
+        android:backgroundTint="#EDB4B4"
+        android:text="Eye"
+        android:textSize="21sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.623" />
+        app:layout_constraintVertical_bias="0.736" />
 </androidx.constraintlayout.widget.ConstraintLayout>

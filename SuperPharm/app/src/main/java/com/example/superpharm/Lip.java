@@ -3,12 +3,15 @@ package com.example.superpharm;
 import android.graphics.Bitmap;
 
 public class Lip extends MainProduct {
-    public Lip(String type, String color, Double size, Bitmap bt, int price) {
+    public Lip(String type, String color, Double size, Bitmap bt, int price, int qt, String t, String nn) {
         this.type = type;
         this.color = color;
         this.size = size;
         this.bt = bt;
         this.price = price;
+        this.quantity = qt;
+        this.tType = t;
+        this.nameOf = nn;
     }
 
     public String getType() {

@@ -29,10 +29,8 @@ public class SignAct extends AppCompatActivity {
     private EditText txtPass;
     private EditText txtPhone;
     private EditText txtFname;
-    private EditText txtLname;
+    private EditText txAddress;
     private Button btnSignUp;
-    private String emailA;
-    private String passwordA;
     private String userId;
     private FirebaseAuth mAuth;
     private FirebaseFirestore fstore;
@@ -40,11 +38,13 @@ public class SignAct extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign);
-        txtMail = (EditText) findViewById(R.id.txEmail);
+        txtMail = (EditText) findViewById(R.id.txMail);
         txtPass = (EditText) findViewById(R.id.txPass);
         btnSignUp = (Button) findViewById(R.id.btnSign);
         txtFname = (EditText) findViewById(R.id.txName);
         txtPhone = (EditText) findViewById(R.id.txPhone);
+        txAddress = findViewById(R.id.txAddress);
+        btnSignUp = findViewById(R.id.btnSign);
         mAuth = FirebaseAuth.getInstance();
         fstore = FirebaseFirestore.getInstance();
         btnSignUp.setOnClickListener(new View.OnClickListener() {
@@ -65,17 +65,19 @@ public class SignAct extends AppCompatActivity {
                             String name = txtFname.getText().toString();
                             String phoneNo = txtPhone.getText().toString();
                             String emailAd = txtMail.getText().toString();
+                            String address = txAddress.getText().toString();
                             DocumentReference documentReference = fstore.collection("users").document(userId);
                             Map<String,Object> user1 = new HashMap<>();
                             user1.put("First Name",name);
                             user1.put("Phone No",phoneNo);
                             user1.put("Email",emailAd);
+                            user1.put("Address",address);
                             documentReference.set(user1).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {
                                     Toast.makeText(SignAct.this, "Saved",
                                             Toast.LENGTH_SHORT).show();
-                                    finish();
+                                   // finish();
                                     startActivity(new Intent(SignAct.this, MaiScreen.class));
 
                                 }
@@ -83,6 +85,7 @@ public class SignAct extends AppCompatActivity {
 
                         } else {
                             // If sign up fails, display a message to the user.
+                            DialogClass dd = new DialogClass("fail!","check your credentials","ok");
                             Log.w("TAG", "createUserWithEmail:failure", task.getException());
                             Toast.makeText(SignAct.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();

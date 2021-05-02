@@ -24,9 +24,11 @@ public class EyesList extends ArrayAdapter<Eyes> {
         ImageView img = listviewItem.findViewById(R.id.imageView);
         TextView txtPrice = listviewItem.findViewById(R.id.txPrice);
         TextView txtType = listviewItem.findViewById(R.id.txType);
+        TextView quant = listviewItem.findViewById(R.id.txQuant);
         Eyes eye = eyesList.get(position);
         txtPrice.setText(eye.getType());
         txtType.setText(eye.getType());
+       // quant.setText(eye.quantity);
         img.setImageBitmap(eye.getBt());
         return listviewItem;
     }

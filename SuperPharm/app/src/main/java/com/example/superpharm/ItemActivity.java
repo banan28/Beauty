@@ -50,18 +50,29 @@ public class ItemActivity extends AppCompatActivity {
                 switch (type){
                     case "eye":
                         intent.putExtra("Price",eyesPage.eye.getPrice());
+                        intent.putExtra("Name",eyesPage.eye.nameOf);
                         break;
                     case "face":
                          intent.putExtra("Price",facePge.face.price);
+                        intent.putExtra("Name",facePge.face.nameOf);
                          break;
                     case "lip":
                         intent.putExtra("Price",lipPage.lip.price);
+                        intent.putExtra("Name",lipPage.lip.nameOf);
                         break;
                     default:
 
                      }
+                     startActivity(intent);
                 }
 
+        });
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //add objects to a static arraylist in the cart class
+                //save the list in sharedpreferences
+            }
         });
     }
 }

@@ -24,9 +24,11 @@ public class FaceList extends ArrayAdapter<Face> {
         ImageView img = listviewItem.findViewById(R.id.imageView);
         TextView txtPrice = listviewItem.findViewById(R.id.txPrice);
         TextView txtType = listviewItem.findViewById(R.id.txType);
+        TextView quant = listviewItem.findViewById(R.id.txQuant);
         Face fc = eyesList.get(position);
         txtPrice.setText(fc.getType());
         txtType.setText(fc.getType());
+       // quant.setText(fc.quantity);
         img.setImageBitmap(fc.bt);
         return listviewItem;
     }

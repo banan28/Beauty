@@ -5,4 +5,7 @@ public class MainProduct {
     String name;
     int price;
     Bitmap bt;
+    int quantity;
+    String tType;
+    String nameOf;
 }

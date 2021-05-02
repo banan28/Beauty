@@ -26,11 +26,11 @@ public class lipPage extends AppCompatActivity {
 
         products = findViewById(R.id.lipList);
         lipList = new ArrayList<Lip>();
-        Lip lp = new Lip("waterproof","red", 10.00, BitmapFactory.decodeResource(getResources(),R.drawable.lp1),10);
+        Lip lp = new Lip("waterproof","red", 10.00, BitmapFactory.decodeResource(getResources(),R.drawable.l1),10,15,"lip","");
         lipList.add(lp);
-        Lip lp1 = new Lip("waterproof","red", 10.00, BitmapFactory.decodeResource(getResources(),R.drawable.lp2),10);
+        Lip lp1 = new Lip("waterproof","red", 10.00, BitmapFactory.decodeResource(getResources(),R.drawable.l2),10,15,"lip","");
         lipList.add(lp1);
-        //Lip lp2 = new Lip("waterproof","red", 10.00, BitmapFactory.decodeResource(getResources(),R.drawable.lp3),10);
+       // Lip lp2 = new Lip("waterproof","red", 10.00, BitmapFactory.decodeResource(getResources(),R.drawable.l3),10);
         //lipList.add(lp2);
         LipList adapter = new LipList(lipPage.this, lipList);
         products.setAdapter(adapter);
@@ -38,50 +38,26 @@ public class lipPage extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 lip = (Lip) adapterView.getAdapter().getItem(i);
-                NameOfRunnable.run();
+                Intent intent = new Intent(lipPage.this,ItemActivity.class);
+                bt = lip.getBt();
+                ByteArrayOutputStream bstream = new ByteArrayOutputStream();
+                bt.compress(Bitmap.CompressFormat.PNG,100,bstream);
+                byte[] byteArray = bstream.toByteArray();
+                String type = lip.getType();
+                String name = lip.name;
+                String size = lip.getSize().toString();
+                String color = lip.getColor();
+                String price = String.valueOf(lip.price);
+                intent.putExtra("Type",type);
+                intent.putExtra("Size",size);
+                intent.putExtra("Color",color);
+                intent.putExtra("Name",name);
+                intent.putExtra("Price",price);
+                intent.putExtra("Image",byteArray);
+                startActivity(intent);
 
             }
         });
     }
-    public Runnable NameOfRunnable = new Runnable()
-    {
-
-        @Override
-        public void run()
-        {
-            while (true)
-            {
-                // TODO add code to refresh in background
-                try
-                {
-
-                    Thread.sleep(100);// sleeps 1 second
-
-                    Intent intent = new Intent(lipPage.this,ItemActivity.class);
-                    bt = lip.getBt();
-                    ByteArrayOutputStream bstream = new ByteArrayOutputStream();
-                    bt.compress(Bitmap.CompressFormat.PNG,100,bstream);
-                    byte[] byteArray = bstream.toByteArray();
-                    String type = lip.getType();
-                    String name = lip.name;
-                    String size = lip.getSize().toString();
-                    String color = lip.getColor();
-                    String price = String.valueOf(lip.price);
-                    intent.putExtra("Type",type);
-                    intent.putExtra("Size",size);
-                    intent.putExtra("Color",color);
-                    intent.putExtra("Name",name);
-                    intent.putExtra("Price",price);
-                    intent.putExtra("Image",byteArray);
-                    startActivity(intent);
-                    Thread.sleep(100);// sleeps 1 second
-                } catch (InterruptedException e){
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
-                }
-            }
-
-        }
-    };
 
     }
